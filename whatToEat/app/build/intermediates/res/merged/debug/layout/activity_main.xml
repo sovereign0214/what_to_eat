@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sover.whattoeat.MainActivity">
+
+    <TableLayout
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+        <TableRow android:gravity="center">
+            <Button android:id="@+id/append" android:text="新增" android:textSize="18sp"/>
+            <Button android:id="@+id/edit" android:text="修改" android:textSize="18sp"/>
+            <Button android:id="@+id/delete" android:text="刪除" android:textSize="18sp"/>
+            <Button android:id="@+id/clear" android:text="清除" android:textSize="18sp"/>
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+        <TableRow>
+            <TextView
+                android:text="食物" android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_gravity="center"/>
+            <EditText
+                android:gravity="center"
+                android:id="@+id/food"
+                android:textSize="18sp"
+                android:layout_weight="4"/>
+            <Button
+                android:gravity="center"
+                android:id="@+id/go"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:text="今天吃:"/>
+            <TextView
+                android:text=" " android:layout_weight="4"
+                android:id="@+id/result"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_gravity="center"/>
+        </TableRow>
+    </TableLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_weight="1" />
+    </TableRow>
+
+</TableLayout>
